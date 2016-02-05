@@ -22,5 +22,6 @@ function getLocation(){
     city = queryDict["city"];
     country = queryDict["country"];
     forcast = queryDict["forcast"];
+    
 };
 
