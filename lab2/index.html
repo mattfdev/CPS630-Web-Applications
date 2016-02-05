@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Weather</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+  <body>
+      <h1>Welcome to Mad Accurate Weather!</h1>
+      <h3>Input the city and country that you want to lookup the weather for</h3>
+      <h4>You can use location detection and change the forcast duration too!</h4>
+      <br>
+      <form class="form-inline">
+          <div class="form-group">
+              <label for="cityInput">City</label>
+              <input type="text" class="form-control" id="city" placeholder="Input a city">
+          </div>
+          <div class="form-group">
+              <label for="countryInput">Country</label>
+              <input type="text" class="form-control" id="country" placeholder="Input a country">
+          </div>
+          <div class="form-group">
+              <label for="forcastLength">Days to Forcast</label>
+              <select class="form-control" id="forcast">
+                  <option>1 Day</option>
+                  <option>5 day Forcast</option>
+                  <option>16 day Forcast</option>
+              </select>
+          </div>
+          <button type="button" class="btn btn-default" id="geolocate" aria-label="Left Align">
+            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+          </button>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+              
+    
+    
+    
+    
+    
+    <!--API key for weather-->
+    <!--http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID={59bfbf0f1e84f7ac7b16b0828e47578c}-->
+<!--Icons made by MerlinRed at http://merlinthered.deviantart.com/art/plain-weather-icons-157162192-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
