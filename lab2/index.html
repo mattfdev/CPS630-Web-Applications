@@ -16,31 +16,23 @@
       <div class="header">
       <h1>Welcome to Mad Accurate Weather!</h1>
       <h3>Input the city and country that you want to lookup the weather for</h3>
-      <h4>You can use location detection and change the forcast duration too!</h4>
+      <h4>You can use location detection too!</h4>
       </div>
       <br>
-      <form class="form-inline" onsubmit="return getLocation();">
+      <form class="form-inline" onsubmit="getLocation(); return false;">
           <div class="form-group">
               <label for="cityInput">City</label>
               <input type="text" class="form-control" id="city" name="city" placeholder="Input a city">
           </div>
           <div class="form-group">
               <label for="countryInput">Country Code</label>
-              <input type="text" class="form-control" id="country" name="country" placeholder="Input a country">
-          </div>
-          <div class="form-group">
-              <label for="forcastLength">Days to Forcast</label>
-              <select class="form-control" id="forcast" name="forcast">
-                  <option value="1">1 Day</option>
-                  <option value="5">5 day Forcast</option>
-                  <option value="16">16 day Forcast</option>
-              </select>
+              <input type="text" class="form-control" id="country" name="country" placeholder="US" maxlength="2">
           </div>
           <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="C"> °C
+            <input type="radio" name="unit" id="inlineRadio1" value="metric" checked="checked"> °C
           </label>
           <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="F"> °F
+            <input type="radio" name="unit" id="inlineRadio1" value="imperial"> °F
           </label>
 
 
