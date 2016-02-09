@@ -19,7 +19,7 @@
       <h4>You can use location detection too!</h4>
       </div>
       <br>
-      <form class="form-inline" onsubmit="getLocation(); return false;">
+      <form class="form-inline" onsubmit=" ">
           <div class="form-group">
               <label for="cityInput">City</label>
               <input type="text" class="form-control" id="city" name="city" placeholder="Input a city">
@@ -39,18 +39,23 @@
           <button type="button" class="btn btn-default" id="geolocate" aria-label="Left Align">
             <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
           </button>
-          <button type="submit" class="btn btn-default" value="submit">Submit</button>
+          <button type="button" class="btn btn-default" value="click" onclick="getLocation(); return false;">Submit</button>
       </form>
 
-      <div class="weather-logic">
-          
+      <div id="weather-logic">
+          <div id="current"></div>
+          <div id="3hr"></div>
+          <div id="6hr"></div>
+          <div id="9hr"></div>
+          <div id="12hr"></div>
+          <div id="1day"></div>
+          <div id="2day"></div>
+          <div id="3day"></div>
+          <div id="4day"></div>
+          <div id="5day"></div>
     
+      </div>
     
-    
-    
-    
-    <!--API key for weather-->
-    <!--http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=59bfbf0f1e84f7ac7b16b0828e47578c-->
 <!--Icons made by MerlinRed at http://merlinthered.deviantart.com/art/plain-weather-icons-157162192-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

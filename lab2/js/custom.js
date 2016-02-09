@@ -18,11 +18,9 @@ document.getElementById("geolocate").onclick = function(){
 
 //get location from form and submit to OpenWeather via API
 function getLocation(){
-    var queryDict = {};
-    location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]});
-    city = queryDict["city"];
-    country = queryDict["country"];
-    unit = queryDict["unit"];
+    city = document.getElementById("city").value;
+    country = document.getElementById("country").value;
+    unit = document.querySelector('input[name="unit"]:checked').value;
     getWeatherData(city,country,unit);
 };
 
@@ -57,13 +55,14 @@ function getWeatherData(city,country,unit){
 
 function utilizeData(results){
     var location = results.city.name;
-    
     var minTemp = results.list[0].main.temp_min;
     var maxTemp = results.list[0].main.temp_max;
     var temp = results.list[0].main.temp;
     var time = results.list[0].dt;
     var weather = results.list[0].weather.main;
     var description = results.list[0].weather.description;
-    console.log(time);
-    
+    var weatherHTML =document.getElementById("city"); 
+    weatherHTML.innerHTML = "<h2> Weather for the City of " +location +"</h2>";
+   // weatherHTML.innerHTML = "<h3> Current Temperature " + temp + "</h3>"; 
+    document.getElementById("current").innerHTML = "<h3> It is " + temp + " C right now</h3>";
 }
