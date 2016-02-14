@@ -13,12 +13,19 @@
 
   </head>
   <body>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-12">
       <div class="header">
-      <h1>Welcome to Mad Accurate Weather!</h1>
-      <h3>Input the city and country that you want to lookup the weather for</h3>
+      <h1>Welcome to Weather Genie!</h1>
+      <h3>Input the city and country that you want to lookup </h3>
       <h4>You can use location detection too!</h4>
       </div>
       <br>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
       <form class="form-inline" onsubmit=" ">
           <div class="form-group">
               <label for="cityInput">City</label>
@@ -27,23 +34,29 @@
           <div class="form-group">
               <label for="countryInput">Country Code</label>
               <input type="text" class="form-control" id="country" name="country" placeholder="US" maxlength="2">
-          </div>
+         
           <label class="radio-inline">
             <input type="radio" name="unit" id="inlineRadio1" value="metric" checked="checked"> °C
           </label>
           <label class="radio-inline">
             <input type="radio" name="unit" id="inlineRadio1" value="imperial"> °F
           </label>
-
+          </div>
 
           <button type="button" class="btn btn-default" id="geolocate" aria-label="Left Align">
             <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
           </button>
           <button type="button" class="btn btn-default" value="click" onclick="getLocation(); return false;">Submit</button>
       </form>
-
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
       <div id="weather-logic">
+          <div id="city2"></div>
           <div id="current"></div>
+          <div id="weather-icon"></div>
+          <div id="description"></div>
           <div id="3hr"></div>
           <div id="6hr"></div>
           <div id="9hr"></div>
@@ -55,7 +68,9 @@
           <div id="5day"></div>
     
       </div>
-    
+      </div>
+      </div>
+      </div><!--container closed  -->
 <!--Icons made by MerlinRed at http://merlinthered.deviantart.com/art/plain-weather-icons-157162192-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

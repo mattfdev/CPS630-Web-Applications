@@ -26,7 +26,8 @@ function getLocation(){
 
 function lookupCoord(lon,lat){
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units=metric&APPID=59bfbf0f1e84f7ac7b16b0828e47578c";
+    var degree = document.querySelector('input[name="unit"]:checked').value;
+    var url = "http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units="+degree+"&APPID=59bfbf0f1e84f7ac7b16b0828e47578c";
 
     xmlhttp.onload = function(){
         console.log("geobutton");
@@ -53,16 +54,31 @@ function getWeatherData(city,country,unit){
    // alert("test");
 }
 
+function processTime(unixTime){
+    var date = new Date(unixTime*1000);
+    var hours = date.getHours();
+    var minutes = "0" + date.getMinutes();
+    var seconds = "0" + date.getSeconds();
+    var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    return formattedTime;
+
+}
+
 function utilizeData(results){
     var location = results.city.name;
     var minTemp = results.list[0].main.temp_min;
     var maxTemp = results.list[0].main.temp_max;
     var temp = results.list[0].main.temp;
-    var time = results.list[0].dt;
+    var time = processTime(results.list[0].dt);
     var weather = results.list[0].weather.main;
-    var description = results.list[0].weather.description;
+    var description = results['list'][0]['weather'][0]['description'];
+    var iconID = results['list'][0]['weather'][0]['icon'];
     var weatherHTML =document.getElementById("city"); 
-    weatherHTML.innerHTML = "<h2> Weather for the City of " +location +"</h2>";
-   // weatherHTML.innerHTML = "<h3> Current Temperature " + temp + "</h3>"; 
-    document.getElementById("current").innerHTML = "<h3> It is " + temp + " C right now</h3>";
+    document.getElementById("city2").innerHTML = "<h4> Weather for the City of " +location +" at " + time +"</h4>";
+    var iconURL=document.getElementById("weather-icon").innerHTML = "<img src='http://openweathermap.org/img/w/"+iconID+".png'></img>";
+    var tempUnit = "";
+    if(document.querySelector('input[name="unit"]:checked').value === 'imperial') tempUnit = '°F';
+    else tempUnit = '°C';
+    document.getElementById("current").innerHTML = "<h2>" + temp + tempUnit +"</h2>";
+    document.getElementById("description").innerHTML = "<p>"+description+"</p>";
 }
