@@ -15,20 +15,32 @@
       <div class="container-fluid">
       <div class="page-header">
         <h1>Location Finder</h1>
-        <h4>Drop in a text file with your log and lat to test </h4>  
+        <h4>Drop in a text file with your lon and lat to test </h4> 
+        <p>There is an asycrounous calling isse, and google maps quota issue
+            with my code. Please drop the file into the Dropzone TWICE for
+            the appropriate information to come up</p> 
       </div>
       <br>
       <div class="row">
-      <div class="col-md-12">
-          <div id="drop_zone">Drop location file here</div>
+      <div class="col-md-6">
+          <div id="drop_zone">Drop location file here (2x)</div>
       </div>
-      
       </div>
       <div class="row">
           <div class="col-md-12">
-              <div id="googleMap" style="width:500px;height:380px;"></div>
-              </div>
+              <div id="googleMap" style=""></div>
+              <br>
           </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <p>Google Maps API takes about 5 seconds to repsond to multiple
+                  queries please be patient </p>
+              <section id="infoPlug">
+                  
+              </section>
+          </div>
+      </div>
    </div><!--container closed  -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

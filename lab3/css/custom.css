@@ -8,6 +8,8 @@
     font: 20pt bold 'Vollkorn';
     color: #bbb;
 }
-#map {
-        height: 100%;
+
+#googleMap {
+        width:500px;
+        height:380px;
       }
