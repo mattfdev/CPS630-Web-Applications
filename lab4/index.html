@@ -11,9 +11,9 @@
     <link href="css/custom.css" rel="stylesheet">
 
   </head>
-  <body ng-app="myApp" ng-controller="todoCtrl">
+  <body ng-app="myApp" ng-controller="todoCtrl" ng-cloak>
       <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container-fluid" >
       <div class="page-header">
         <h1>Welcome to Reminder+</h1>
         <h4>Keep track of reminders, add/delete as necessary, all from a simple WebApp </h4>
@@ -31,7 +31,7 @@
       </div><br>
       <div class="page-header">
       <h3>Items to do</h3>
-      <div ng-repeat="x in todoList">
+      <div ng-repeat="x in todoList" ng-cloak>
         <div class="btn-group" role="group" aria-label="...">
             <button type="button" class="btn btn-default" ng-click="finished(x)">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -47,14 +47,12 @@
       </div>
       <div class="page-header">
       <h3>Completed Items</h3>
-      <div ng-repeat="x in todoComplete">
-          <div class="btn-group" role="group" aria-label="...">
+      <div ng-repeat="x in todoComplete" ng-cloak>
             <button type="button" class="btn btn-default" ng-click="redo(x)">
                 <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
             </button> 
             <span id="todoText" ng-bind="x.todoText"></span>
             <span ng-bind="x.description"></span>
-            </div>
       </div>
       </div>
       </nav>

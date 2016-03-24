@@ -1,3 +1,6 @@
 #todoText{
     font-size: 1.3em;
 }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
