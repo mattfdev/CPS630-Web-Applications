@@ -1,10 +1,23 @@
 {
-	todo[
+	"todo":[
 	{
-		task: ‘title of task’,
-		complete: false, 
-		description:"description of task"
+		"task": "Hello",
+		"complete": false, 
+		"description":"say hello in english"
 	},
+        {
+		"task": "ola",
+		"complete": false, 
+		"description":"say hello in spanish"
+	},{
+		"task": "esst",
+		"complete": true, 
+		"description":"say hello in fdsf"
+	},{
+		"task": "eep",
+		"complete": false, 
+		"description":"say hello in foolsi"
+	}
 	] 
 }
 

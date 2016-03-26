@@ -1,0 +1,8 @@
+<div ng-repeat="x in todoComplete" ng-cloak>
+            <button type="button" class="btn btn-default" ng-click="redo(x)">
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </button> 
+            <span id="todoText" ng-bind="x.task"></span>
+            <span id="tododesc" ng-bind="x.description"></span>
+            <br><br>
+</div>
