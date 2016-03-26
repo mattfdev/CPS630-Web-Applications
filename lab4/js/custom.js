@@ -11,11 +11,29 @@ app.controller('todoCtrl', function($scope) {
     $scope.todoComplete = [];
     $scope.todoList = [];
     $scope.todoAdd = function() {
-        $scope.todoList.push({task:$scope.todoInput, complete:false, description:$scope.todoDesc});
-        $scope.todoInput = "";
-        $scope.todoDesc = "";
+        var input = $scope.todoInput;
+        var inDesc = $scope.todoDesc;
+        if(validate(input)){
+            $scope.todoList.push({task:input, complete:false, description:inDesc});
+            $scope.todoInput = "";
+            $scope.todoDesc = "";
+        }
+        else{
+            $scope.repeat = true;
+        }
+        
     };
-
+    
+    function validate(input){
+        var list = $scope.todoList;
+        for(var i=0;i<list.length;i++){
+            if(list[i].task === input){
+                return false;
+            }
+        }
+        return true;
+    }
+    
     function deleteEntry(x) {
         var oldList = $scope.todoList;
         $scope.todoList = [];
