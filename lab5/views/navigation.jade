@@ -1,0 +1,14 @@
+style
+    include nav.css
+block vars
+ul
+    if(active == 1 )
+        li 
+            a(href = '/', class = 'active') Home
+        li 
+            a(href = '/about') About
+    else
+        li 
+            a(href = '/') Home
+        li 
+            a(href = '/about', class = 'active') About
