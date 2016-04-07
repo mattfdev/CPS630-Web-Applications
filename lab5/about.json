@@ -1,0 +1,19 @@
+{
+	"articles":[
+	{
+		"title": "Matthew Francis",
+		"imageLink": "http://www.scs.ryerson.ca/~m28franc/me.jpg", 
+		"description":"Long time Ryerson student majoring in computer science with an intrest in web development.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies tempor arcu ac consequat. Nullam consequat ut ante posuere scelerisque. Suspendisse in lobortis libero. Cras gravida dolor a ante tristique pellentesque. Aliquam molestie pulvinar urna. Phasellus nunc diam, posuere at tincidunt tristique, rhoncus eget massa. Fusce aliquet purus ut odio tincidunt, ut vulputate eros dapibus. Proin quis nibh a mi ultricies sodales nec non sapien. Proin vitae auctor elit.Maecenas id eleifend sem. Duis nunc tellus, egestas non posuere eget, euismod nec nisi. Fusce id quam sollicitudin, sollicitudin urna non, condimentum risus. In ornare maximus augue, at luctus ex tristique sit amet. Sed id purus egestas, imperdiet nunc id, lacinia quam. Phasellus volutpat ligula nec neque rutrum, sed elementum mauris mollis. Donec orci nibh, fermentum eu neque pellentesque, condimentum auctor felis. Nam ante nisi, bibendum nec metus ac, lobortis gravida erat. Nam quis velit nec elit lacinia laoreet. Ut venenatis blandit justo non suscipit. Nunc porta nisl sed eros faucibus gravida. Sed tortor odio, ultricies a turpis eget, auctor eleifend sem."
+	},
+        {
+		"title": "Angular.js",
+		"imageLink": "http://www.titanui.com/wp-content/uploads/2013/11/30/Flat-AngularJS-Logo-PSD.png",
+		"description":"AngularJS (commonly referred to as Angular or Angular.js) is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications.The AngularJS framework works by first reading the HTML page, which has embedded into it additional custom tag attributes. Angular interprets those attributes as directives to bind input or output parts of the page to a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be manually set within the code, or retrieved from static or dynamic JSON resources.According to JavaScript analytics service Libscore, AngularJS is used on the websites of Wolfram Alpha, NBC, Walgreens, Intel, Sprint, ABC News, and approximately 8,400 other sites out of 1 million tested in July 2015.[2]AngularJS is the frontend part of the MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular.js itself, and Node.js runtime environment."
+	},{
+		"title": "Node.js",
+		"imageLink": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png",
+		"description":"In software development, Node.js is an open-source, cross-platform runtime environment for developing server-side Web applications. Although Node.js is not a JavaScript framework,[3] many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript. The runtime environment interprets JavaScript using Google's V8 JavaScript engine.Node.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in Web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).[4]The Node.js distributed development project, governed by the Node.js Foundation,[5] is facilitated by the Linux Foundation's Collaborative Projects program.[6]"
+	}
+	] 
+}
+
